@@ -1,5 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 
+const { title } = require("process");
+
 
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {}
@@ -16,7 +18,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title} \n 
 ## Table of Contents \n
-* Descritpion
+* Descritpion 
 * Installation
 * Usage
 * Contributing
@@ -24,12 +26,18 @@ function generateMarkdown(data) {
 * Questions
 * License
 ## Description
-##Installation Guide
-##Usage
+${data.description} 
+## Installation Guide
+${data.install}
+## Usage
+${data.usage}
 ## Contributing
+Created by ${data.contribute}
 ## Tests
+${data.tests}
 ## Questions
-##License
+If you have any questions you can contact with though my GitHub profile ${data.username} or by email ${data.email} 
+## License
   
   `;
   
