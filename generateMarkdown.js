@@ -16,13 +16,20 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `# ${data.title} \n 
 ## Table of Contents \n
-
-
-
-
-  
-  
-  
+* Descritpion
+* Installation
+* Usage
+* Contributing
+* Tests
+* Questions
+* License
+## Description
+##Installation Guide
+##Usage
+## Contributing
+## Tests
+## Questions
+##License
   
   `;
   
