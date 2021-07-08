@@ -45,6 +45,12 @@ questions
       message: "What is your email address?",
       name: "email",
     },
+    {
+      type: "list",
+      message: "Pick a Badge",
+      name: "license",
+      choices:['MIT License', ]
+    },
     
   ])
   .then((answers) => {
@@ -52,17 +58,9 @@ questions
           if(err){
               console.log(err);
           }else{
-              console.log("MArkdown displayed")
+              console.log("Read Me Generated")
           }
       })
-    // fs.appendFile("README.md", JSON.stringify(answers) + '\n', (err) => {
-    //   if (err) {
-    //     console.error(err);
-    //   } else {
-    //     console("Read Me Created");
-    //   }
-    // });
-   
   });
 // console.log(`${answers.email}`)
 
