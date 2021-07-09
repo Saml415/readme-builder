@@ -51,8 +51,8 @@ questions
       name: "license",
       choices: [
         "MIT",
-        "MPL",
-        "AL",
+        "MPL 2.0",
+        "Apache 2.0",
         {
           name: "No License",
           value: "",
