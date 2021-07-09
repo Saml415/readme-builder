@@ -2,9 +2,22 @@
 
 const { title } = require("process");
 
-
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(data) {
+  switch (data) {
+    case "MIT":
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+
+    case "MPL":
+      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+
+    case "AL":
+      return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+
+    default:
+      return "";
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -38,9 +51,9 @@ ${data.tests}
 ## Questions
 If you have any questions you can contact with though my GitHub profile ${data.username} or by email ${data.email} 
 ## License
-  
+${renderLicenseBadge(data.license)}
+This project is under the ${data.license} license.
   `;
- 
 }
 
 module.exports = generateMarkdown;

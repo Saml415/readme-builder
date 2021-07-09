@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const questions = require("inquirer");
 const fs = require("fs");
-const markdown = require('./generateMarkdown') 
+const markdown = require("./generateMarkdown");
 // TODO: Create an array of questions for user input
 questions
   .prompt([
@@ -49,18 +49,25 @@ questions
       type: "list",
       message: "Pick a Badge",
       name: "license",
-      choices:['MIT License', ]
+      choices: [
+        "MIT",
+        "MPL",
+        "AL",
+        {
+          name: "No License",
+          value: "",
+        },
+      ],
     },
-    
   ])
   .then((answers) => {
-      fs.appendFile("README.md", markdown(answers), (err) => {
-          if(err){
-              console.log(err);
-          }else{
-              console.log("Read Me Generated")
-          }
-      })
+    fs.appendFile("README.md", markdown(answers), (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log("Read Me Generated");
+      }
+    });
   });
 // console.log(`${answers.email}`)
 
