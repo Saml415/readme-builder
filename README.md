@@ -22,7 +22,7 @@ To install, look for ReadME.md repo listed on the developer account. Fork the re
 ## Contributing
 Created by Saml415
 ## Tests
-You may need to delete the current READMe file i.e this one before making a new
+You may need to delete the current READMe file i.e this one before making a new.
 ## Questions
 If you have any questions you can contact with though my GitHub profile Saml415 or by email bobdoe784@gmail.com 
 ## License
